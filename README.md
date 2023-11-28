@@ -12,6 +12,9 @@
 
 OpenAI Docs, Cookbook 과 Langchain Docs를 기반으로 작성하며, 책에 나오는 모든 내용은 영리적인 목적을 포함한 모든 활동에 활용 가능합니다.
 
+
+[Wikidocs에서 책 보러가기](https://wikidocs.net/book/12439)
+
 ## 목차
 
 | 목차 | 제목 |
