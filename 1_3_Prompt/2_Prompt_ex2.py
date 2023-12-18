@@ -17,7 +17,7 @@ CONTENT = """아래 문맥에 따라 질문에 대답해. 답변은 짧고 간�
 답변:
 """
 
-response = openai.ChatCompletion.create(
+response = openai.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "user", "content": CONTENT},

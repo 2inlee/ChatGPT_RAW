@@ -1,7 +1,7 @@
 import openai
 
 def prompt(context, question):
-    return openai.ChatCompletion.create(
+    return openai.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "assistant", "content": "안녕하세요 저는 도서관리 시스템입니다. 책 내용을 알려주시면 해당 책에서 답변을 느리겠습니다."},

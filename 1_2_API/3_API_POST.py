@@ -9,9 +9,9 @@ app = Flask(__name__)
 def generate_answer():
     if request.method == 'POST':
       prompt = request.json['prompt']
-      openai.api_key = os.environ.get('API_KEY')
-      pre_prompt = "한국어로 친절하게 대답해줘 :)\n\n"
-      response = openai.ChatCompletion.create(
+      openai.api_key = os.environ.get('OPENAI_API_KEY')
+      pre_prompt = "지금부터 내가 일정을 줄테니까 표로 만들어줘 시간순서로 정렬해줘:)\n\n"
+      response = openai.chat.completions.create(
       model="gpt-3.5-turbo",
       messages=[
         {"role": "system", "content": "You are a helpful assistant."},
@@ -25,6 +25,6 @@ def generate_answer():
 
       return jsonify({'answer': answer})
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=False, port=5001)
 
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=False, port=5002)
